@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+
+    defaultConfig {
+        applicationId "com.dk.list.todo"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
+        }
+
+        release {
+            minifyEnabled true
+            useProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            testProguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguardTest-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile "com.android.support:appcompat-v7:24.2.0"
+    compile "com.android.support:cardview-v7:24.2.0"
+    compile "com.android.support:design:24.2.0"
+    compile "com.android.support:recyclerview-v7:24.2.0"
+    compile "com.android.support:support-v4:24.2.0"
+
+    // Dagger
+    apt 'com.google.dagger:dagger-compiler:2.7'
+    compile 'com.google.dagger:dagger:2.7'
+    provided 'javax.annotation:jsr250-api:1.0'
+
+    //Butterknife
+    compile 'com.jakewharton:butterknife:8.4.0'
+    apt 'com.jakewharton:butterknife-compiler:8.4.0'
+
+}

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">IDo</string>
+    <string name="tasks_loading">Loading...</string>
+    <string name="no_tasks">You have no To-Do tasks!</string>
+    <string name="popup_delete_task">Delete</string>
+    <string name="popup_edit_task">Edit</string>
+    <string name="task_add">Add New Task</string>
+    <string name="task_edit">Edit Task</string>
+    <string name="error_form">Please fill all fields first!</string>
+</resources>
