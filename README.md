@@ -1,2 +1,2 @@
 # todo-mvp
-A sample MVP project
+A sample to-do app using MVP pattern with Dagger 2, Butterknife and Realm database.
